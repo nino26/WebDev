@@ -1,0 +1,26 @@
+body {
+    font-family: Lato, Helvetica,Arial; 
+    /* justify-content: center;
+     */
+     position: center;
+}
+
+#top{
+    border: 1px solid;
+    margin-bottom: 20%;
+    margin-top:10px;
+}
+
+li{
+    list-style: none;
+}
+
+/* .item{
+    font-size:large;
+    background-color: blue;
+} */
+
+.todoButt{
+    margin-right: 20px;
+    
+}
