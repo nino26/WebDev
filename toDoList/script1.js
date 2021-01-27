@@ -29,10 +29,36 @@ subButton.addEventListener('click', function(){
         ul.childNodes[num].className='item';
         console.log(ul.childNodes[num]);
         newTodo.value= '';
-
-
-
     }
 
 })
 
+
+document.addEventListener('keypress',function(e){
+    if(newTodo.value.length !== 0 && e.key === 'Enter'){
+
+        //stores value of todo string
+        let todo = newTodo.value;
+        //creates the html li
+        let li = document.createElement('li');
+        let butt = document.createElement('button');
+        li.appendChild(butt);
+        li.firstChild.className= 'todoButt btn btn-primary';
+        //creates the textnode off the li element and appends it
+        li.appendChild(document.createTextNode(todo));
+        //appends li to it's parent element ul
+        ul.appendChild(li);
+        //returns to clear
+        ul.childNodes[num].className='item';
+        console.log(ul.childNodes[num]);
+        newTodo.value= '';
+    }
+
+})
+
+let crossButt = document.getElementsByTagName('li');
+
+crossButt.addEventListener('click', function(){
+    // crossButt.firstChild.className('cross');
+    console.log('hello');
+})
